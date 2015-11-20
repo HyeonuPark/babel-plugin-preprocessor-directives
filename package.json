@@ -1,0 +1,55 @@
+{
+  "name": "babel-plugin-preprocessor-directives",
+  "version": "0.1.0",
+  "description": "#ifndef for JavaScript",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyeonupark/babel-plugin-preprocessor-directive.git"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "preprocessor"
+  ],
+  "author": "HyeonuPark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hyeonupark/babel-plugin-preprocessor-directive/issues"
+  },
+  "homepage": "https://github.com/hyeonupark/babel-plugin-preprocessor-directive#readme",
+  "babel": {
+    "presets": [
+      "escompile-node"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "describe",
+      "it"
+    ],
+    "ignore": [
+      "node_modules/**",
+      "bin/**",
+      "bin_test/**",
+      "gulpfile.js",
+      "tmp/**"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-eslint": "^4.1.5",
+    "babel-preset-escompile": "^1.1.0",
+    "babel-preset-escompile-node": "^1.2.0",
+    "chai": "^3.4.1",
+    "del": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-standard": "^5.2.2"
+  }
+}
