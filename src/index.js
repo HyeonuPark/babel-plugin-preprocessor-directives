@@ -102,6 +102,15 @@ module.exports = function ({types: t}) {
 
       BlockStatement (path, state) {
         checkDirectives(t, path, state)
+      },
+
+      Identifier (path, state) {
+        const {name} = path.node
+        const defineMap = state.get(DEFINE_MAP)
+        const alias = defineMap.get(name)
+        if (typeof alias === 'string' && alias !== name) {
+          path.replaceWith(t.identifier(alias))
+        }
       }
     }
   }
